@@ -18,7 +18,7 @@ const App = () => {
         minHeight: '100vh'
       }}
     >
-      <Container size='2'>
+      <Container size='2' px={{ initial: '3' }}>
         <Box>
           <Header />
           <DictionaryProvider>
