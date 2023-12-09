@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
+
 import { Box, Em, Flex, Quote, Section, Separator, Text } from '@radix-ui/themes'
 
 import React from 'react'
 
-const VerbDescription = () => {
+const VerbDescription = ({ verbDescription, source }) => {
   return (
     <Section pt='6' pb='0'>
       <Box>
@@ -17,13 +19,15 @@ const VerbDescription = () => {
             Meaning
           </Text>
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginLeft: 40, marginTop: 20 }}>
-            <li>etc, a set of keys used to operate a typewriter, computer etc</li>
-            <Quote>Keyboard is the par of this job i hate the most</Quote>
+            {verbDescription?.definitions?.map((item, index) => (
+              <li key={index}>{item.definition}</li>
+            ))}
+            {verbDescription?.definitions?.[0]?.example ? <Quote>{verbDescription?.definitions?.[0]?.example}</Quote> : ''}
           </ul>
         </Flex>
         <Separator orientation='horizontal' size='4' mt='5' mb='4' />
         <Text color='gray'>
-          Source <Text ml='4'>https://en.wikionary.org/wiki/keyboard </Text>
+          Source <Text ml='4'>{source}</Text>
         </Text>
       </Box>
     </Section>

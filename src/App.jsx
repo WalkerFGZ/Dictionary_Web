@@ -2,6 +2,7 @@ import './App.css'
 
 import { Box, Container, Theme } from '@radix-ui/themes'
 
+import { DictionaryProvider } from './Context/DictionaryContext'
 import Header from './Components/Header'
 import React from 'react'
 import SearchBar from './Components/SearchBar'
@@ -18,8 +19,10 @@ function App() {
       <Container size='2'>
         <Box>
           <Header />
-          <SearchBar />
-          <WordDescription />
+          <DictionaryProvider>
+            <SearchBar />
+            <WordDescription />
+          </DictionaryProvider>
         </Box>
       </Container>
     </Theme>
