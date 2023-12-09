@@ -6,12 +6,14 @@ import { DictionaryProvider } from './Context/DictionaryContext'
 import Header from './Components/Header'
 import React from 'react'
 import SearchBar from './Components/SearchBar'
+import { ThemeContext } from './Context/ThemeContext'
 import WordDescription from './Components/WordDescription'
 
-function App() {
+const App = () => {
+  const { theme } = React.useContext(ThemeContext)
   return (
     <Theme
-      appearance='dark'
+      appearance={theme}
       style={{
         minHeight: '100vh'
       }}
