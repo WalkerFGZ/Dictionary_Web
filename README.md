@@ -1,8 +1,12 @@
-# React + Vite
+# Dictionary Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dictionary is a simple dictionary application that allows users to search for the definition of a word. It is built using Vite React, Radix UI, and the Merriam-Webster Dictionary API.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instructions on how to install the project and how to get started.
+
+```
+npm install
+npm run dev
+```
